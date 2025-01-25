@@ -34,14 +34,30 @@
     }
   ],
   "const": {
-    "features": [
-      "Automatic CSS generation",
-      "Autocompletion",
-      "Built-in linting",
-      "Preview-based",
-      "Dynamic routing",
-      "Template building",
-      "Global variables"
+    "section": {
+      "title": "Learn to code by watching others",
+      "description": "See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable."
+    },
+    "inputs": [
+      {
+        "id": "first-name",
+        "autocomplete": "given-name",
+        "pattern": "^[a-zA-Z\\s]+$"
+      },
+      {
+        "id": "second-name",
+        "autocomplete": "family-name",
+        "pattern": "^[a-zA-Z\\s]+$"
+      },
+      {
+        "id": "email",
+        "autocomplete": "email",
+        "pattern": "^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$"
+      },
+      {
+        "id": "password",
+        "autocomplete": "password"
+      }
     ]
   }
 }
