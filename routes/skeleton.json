@@ -1,0 +1,67 @@
+{
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "favicon.ico",
+        "type": "image/x-icon"
+      }
+    ]
+  },
+  "fonts": [],
+  "element": "body",
+  "style": "background-color: #FF7979; background-image: url('./static/images/bg-intro-desktop.png'); background-repeat: repeat; box-sizing: border-box; display: flex; flex-direction: column; font-family: \"Poppins\", serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 24px;",
+  "mediaQueries": [
+    {
+      "query": "max-width: 640px",
+      "style": "background-image: url('./static/images/bg-intro-mobile.png');"
+    }
+  ],
+  "children": [
+    {
+      "element": "main",
+      "style": "display: flex; justify-content: space-between; margin-inline: auto; max-width: 1110px; min-height: 558px; width: 100%;",
+      "children": [
+        {
+          "element": "section",
+          "style": "align-items: start; display: flex; flex-direction: column; gap: 11px; justify-content: center; max-width: 525px; text-align: start; width: 100%;",
+          "children": [
+            {
+              "element": "h1",
+              "text": "Learn to code by watching others",
+              "style": "color: white; font-size: 50px; font-weight: bold; letter-spacing: -0.52px; line-height: 55px; margin: 0;"
+            },
+            {
+              "element": "p",
+              "text": "See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.",
+              "style": "color: white; font-size: 16px; font-weight: 500; line-height: 26px;"
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "display: flex; flex-direction: column; gap: 24px; max-width: 540px; width: 100%;",
+          "children": [
+            {
+              "element": "div",
+              "text": "Try it free 7 days cwrapSpan",
+              "style": "align-items: center; background-color: #5E54A4; border-radius: 10px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); color: white; display: flex; font-size: 15px; font-weight: bold; justify-content: center; letter-spacing: 0.27px; line-height: 26px; min-height: 60px;",
+              "children": [
+                {
+                  "element": "span",
+                  "text": " then $20/mo. thereafter",
+                  "style": "font-weight: 400;"
+                }
+              ]
+            },
+            {
+              "element": "form",
+              "style": "background-color: white; border-radius: 10px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); display: flex; flex-direction: column; min-height: 474px; width: 100%;",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
