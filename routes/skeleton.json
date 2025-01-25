@@ -8,7 +8,63 @@
       }
     ]
   },
-  "fonts": [],
+  "classroom": [
+    {
+      "name": "placeholder",
+      "type": "pseudo::",
+      "style": "color: rgba(61, 59, 72, 0.75);"
+    },
+    {
+      "name": "user-invalid::placeholder",
+      "type": "pseudo:",
+      "style": "color: rgba(223, 86, 86, 0.5);"
+    },
+    {
+      "name": "label:has(*:user-invalid:placeholder-shown)::before",
+      "type": "element",
+      "style": "bottom: -4px; color: #FF7979; font-size: 11px; font-style: italic; font-weight: 500; position: absolute; right: 0;"
+    },
+    {
+      "name": "li:nth-of-type(1) > label:has(*:user-invalid:placeholder-shown)::before",
+      "type": "element",
+      "style": "content: 'First Name cannot be empty';"
+    },
+    {
+      "name": "li:nth-of-type(2) > label:has(*:user-invalid:placeholder-shown)::before",
+      "type": "element",
+      "style": "content: 'Last Name cannot be empty';"
+    },
+    {
+      "name": "li:nth-of-type(3) > label:has(*:user-invalid:placeholder-shown)::before",
+      "type": "element",
+      "style": "content: 'Looks like this is not an email';"
+    },
+    {
+      "name": "li:nth-of-type(4) > label:has(*:user-invalid:placeholder-shown)::before",
+      "type": "element",
+      "style": "content: 'Password cannot be empty';"
+    },
+    {
+      "name": "label:has(*:user-invalid)::before",
+      "type": "element",
+      "style": "bottom: -4px; color: #FF7979; font-size: 11px; font-weight: 500; position: absolute; right: 0;"
+    },
+    {
+      "name": "li:nth-of-type(1) > label:has(*:user-invalid)::before",
+      "type": "element",
+      "style": "content: 'Looks like this is not a first name';"
+    },
+    {
+      "name": "li:nth-of-type(2) > label:has(*:user-invalid)::before",
+      "type": "element",
+      "style": "content: 'Looks like this is not a last name';"
+    },
+    {
+      "name": "li:nth-of-type(3) > label:has(*:user-invalid)::before",
+      "type": "element",
+      "style": "content: 'Looks like this is not an email';"
+    }
+  ],
   "element": "body",
   "style": "background-color: #FF7979; background-image: url('./static/images/bg-intro-desktop.png'); background-repeat: repeat; box-sizing: border-box; display: flex; flex-direction: column; font-family: \"Poppins\", serif; justify-content: center; margin: 0; min-height: 100dvh; padding: 24px;",
   "mediaQueries": [
@@ -28,12 +84,12 @@
           "children": [
             {
               "element": "h1",
-              "text": "Learn to code by watching others",
+              "text": "cwrapGlobal[section.title]",
               "style": "color: white; font-size: 50px; font-weight: bold; letter-spacing: -0.52px; line-height: 55px; margin: 0;"
             },
             {
               "element": "p",
-              "text": "See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.",
+              "text": "cwrapGlobal[section.description]",
               "style": "color: white; font-size: 16px; font-weight: 500; line-height: 26px;"
             }
           ]
@@ -45,7 +101,7 @@
             {
               "element": "div",
               "text": "Try it free 7 days cwrapSpan",
-              "style": "align-items: center; background-color: #5E54A4; border-radius: 10px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); color: white; display: flex; font-size: 15px; font-weight: bold; justify-content: center; letter-spacing: 0.27px; line-height: 26px; min-height: 60px;",
+              "style": "align-items: center; background-color: #5E54A4; border-radius: 10px; box-shadow: 0 8px 1px rgba(0, 0, 0, 0.25); color: white; display: flex; font-size: 15px; font-weight: bold; justify-content: center; letter-spacing: 0.27px; line-height: 26px; min-height: 60px;",
               "children": [
                 {
                   "element": "span",
@@ -56,8 +112,92 @@
             },
             {
               "element": "form",
-              "style": "background-color: white; border-radius: 10px; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); display: flex; flex-direction: column; min-height: 474px; width: 100%;",
-              "children": []
+              "style": "align-items: center; background-color: white; border-radius: 10px; box-shadow: 0 8px 1px rgba(0, 0, 0, 0.25); box-sizing: border-box; display: flex; flex-direction: column; min-height: 474px; padding: 40px; width: 100%;",
+              "children": [
+                {
+                  "element": "ul",
+                  "style": "display: flex; flex-direction: column; gap: 20px; list-style: none; margin: 0; padding: 0; width: 100%;",
+                  "blueprint": {
+                    "count": "4",
+                    "element": "li",
+                    "style": "display: flex; width: 100%;",
+                    "children": [
+                      {
+                        "element": "label",
+                        "style": "display: flex; position: relative; width: 100%;",
+                        "children": [
+                          {
+                            "element": "input",
+                            "style": "border: 1px solid #DEDEDE; border-radius: 5px; color: #3D3B48; display: flex; font-size: 14px; font-weight: 600; letter-spacing: 0.25px; line-height: 26px; margin: 0; min-height: 56px; outline: none; padding: 0; padding-inline: 19.5px; width: 100%;",
+                            "extend": [
+                              {
+                                "extension": ":focus",
+                                "style": "border-color: #5E54A4;"
+                              },
+                              {
+                                "extension": ":user-invalid",
+                                "style": "background: url('static/images/icon-error.svg') no-repeat right 27px top 16px; border: 2px solid #FF7979; margin-bottom: 20px;"
+                              }
+                            ],
+                            "attributes": {
+                              "placeholder": "cwrapArray[First Name,Last Name,Email Address,Password]",
+                              "required": "",
+                              "pattern": "cwrapGlobal[cwrapArray[inputs.0.pattern,inputs.1.pattern,inputs.2.pattern,cwrapOmit]]"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "element": "button",
+                  "style": "background-color: #38B57E; border: 1px solid transparent; border-radius: 5px; cursor: pointer; letter-spacing: 1px; margin-top: 20px; min-height: 56px; outline: none; padding: 0; position: relative; transition: background-color 300ms; width: 100%;",
+                  "extend": [
+                    {
+                      "extension": ":focus",
+                      "style": "border: 1px solid #5E54A4;"
+                    },
+                    {
+                      "extension": "> div:nth-of-type(1)",
+                      "style": "transition: background-color 300ms;"
+                    },
+                    {
+                      "extension": ":hover > div:nth-of-type(1)",
+                      "style": "background-color: #77E2B3;"
+                    },
+                    {
+                      "extension": ":hover",
+                      "style": "background-color: #6FCBA2;"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "element": "div",
+                      "style": "align-items: center; background-color: #38CC8B; border-radius: 5px; color: white; display: flex; font-size: 15px; font-weight: 600; justify-content: center; line-height: 26px; min-height: 52px; position: absolute; top: 0; width: 100%;",
+                      "children": [
+                        {
+                          "element": "span",
+                          "style": "margin-top: 4px;",
+                          "text": "CLAIM YOUR FREE TRIAL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "element": "p",
+                  "text": "By clicking the button, you are agreeing to our cwrapSpan",
+                  "style": "color: #BAB7D4; font-size: 11px; font-weight: 500; line-height: 26px; text-align: center;",
+                  "children": [
+                    {
+                      "element": "span",
+                      "text": "Terms and Services",
+                      "style": "color: #FF7979; font-weight: bold;"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
