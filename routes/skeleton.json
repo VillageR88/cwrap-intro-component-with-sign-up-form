@@ -37,7 +37,7 @@
     {
       "name": "li:nth-of-type(3) > label:has(*:user-invalid:placeholder-shown)::before",
       "type": "element",
-      "style": "content: 'Looks like this is not an email';"
+      "style": "content: 'Password cannot be empty';"
     },
     {
       "name": "li:nth-of-type(4) > label:has(*:user-invalid:placeholder-shown)::before",
@@ -47,7 +47,7 @@
     {
       "name": "label:has(*:user-invalid)::before",
       "type": "element",
-      "style": "bottom: -4px; color: #FF7979; font-size: 11px; font-weight: 500; position: absolute; right: 0;"
+      "style": "bottom: -4px; color: #FF7979; font-size: 11px; font-style: italic; font-weight: 500; position: absolute; right: 0;"
     },
     {
       "name": "li:nth-of-type(1) > label:has(*:user-invalid)::before",
